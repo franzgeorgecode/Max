@@ -14,7 +14,7 @@ const [loading, setLoading] = useState(false);
 
 const messageResponse = async () => {
 setLoading(true);
-const { data } = await axios.post('https://max-971a.onrender.com/message', {
+const { data } = await axios.post('https://max-wlrm.onrender.com/message', {
 message
 });
 setLoading(false);
