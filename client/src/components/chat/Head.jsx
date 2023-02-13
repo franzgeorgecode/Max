@@ -1,9 +1,10 @@
+import React from 'react';
+import { Helmet } from 'react-helmet';
+
+
 const Logo = props => {
   return (
-
-
-
-<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+    <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="80.000000pt" height="80.000000pt" viewBox="0 0 512.000000 512.000000"
  preserveAspectRatio="xMidYMid meet">
 
@@ -46,23 +47,25 @@ m2549 -96 c28 -22 35 -73 16 -110 -6 -11 -94 -61 -200 -114 -105 -52 -190 -97
 120 -69 176 -61 68 -160 100 -246 79z"/>
 </g>
 </svg>
-
-
-
-
-
-
-
   );
 };
 
 export default function Head() {
   return (
-    <div className="flex items-center">
-      <div className="bg-[#ffffff] flex items-center justify-center p-4 rounded-2xl">
-        <Logo className="w-8 h-8" />
+    <>
+      <Helmet>
+      <meta property="og:title" content="Max" />
+        <meta property="og:description" content="Bienvenido a Max app de IA, construida con React, Node.js y Next. Interactúa fácilmente con la IA alimentada por OpenAI. Resultados precisos con código abierto. ¡Experimenta la potencia de la tecnología en tus manos hoy!" />
+        <meta property="og:image" content="https://max-alpha.vercel.app/" />
+        <meta property="og:url" content="https://bit.ly/maxChat" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+      <div className="flex items-center">
+        <div className="bg-[#ffffff] flex items-center justify-center p-4 rounded-2xl">
+          <Logo className="w-8 h-8" />
+        </div>
+        <span className="text-[#541690] ml-4 text-7xl">Max</span>
       </div>
-      <span className="text-[#541690] ml-4 text-7xl">Max</span>
-    </div>
+    </>
   );
 }
